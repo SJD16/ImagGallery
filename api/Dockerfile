@@ -2,7 +2,7 @@ FROM python:3.9
 
 WORKDIR /app
 
-EXPOSE port 5050
+EXPOSE 5050
 
 COPY Pipfile Pipfile.lock ./
 
@@ -13,4 +13,5 @@ RUN pip install -r requirements.txt
 
 COPY . ./
 
-CMD ["pipenv", "run", "python", "app.py"]
+CMD ["python", "main.py"]
+
